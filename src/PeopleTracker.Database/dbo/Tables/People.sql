@@ -4,4 +4,3 @@
     [LastName]  NVARCHAR (50) NOT NULL,
     CONSTRAINT [PK_People] PRIMARY KEY CLUSTERED ([ID] ASC)
 );
-
