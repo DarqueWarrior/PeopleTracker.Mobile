@@ -15,7 +15,7 @@ namespace PeopleTracker.UITests
    public class PeopleCRUDTests
    {
       #region Fields
-
+      
       private string baseURL;
 
       private RemoteWebDriver driver;
@@ -100,3 +100,4 @@ namespace PeopleTracker.UITests
       #endregion
    }
 }
+// modified
