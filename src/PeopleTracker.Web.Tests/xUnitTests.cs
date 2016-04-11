@@ -14,7 +14,7 @@ namespace PeopleTracker.Preview.Tests
       public void Create()
       {
          // Arrange
-         var target = new WebApplication1.Controllers.PeopleController(null, null);
+         var target = new PeopleTracker.Web.Controllers.PeopleController(null, null);
 
          // Act
          var result = target.Create();
