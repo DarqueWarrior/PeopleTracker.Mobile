@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using Microsoft.AspNet.Mvc;
-using Microsoft.Extensions.OptionsModel;
-using PeopleTracker.Web.Models;
+using WebApplication1.Models;
+using System.Net;
+using Microsoft.Framework.OptionsModel;
 
-namespace PeopleTracker.Web.Controllers
+namespace WebApplication1.Controllers
 {
    public class PeopleController : Controller
    {
@@ -22,7 +19,7 @@ namespace PeopleTracker.Web.Controllers
 
       public IActionResult Create()
       {
-         ViewData["WebApiBaseUrl"] = this.siteOptions?.Value.WebApiBaseUrl;
+         ViewData["WebApiBaseUrl"] = this.siteOptions?.Options.WebApiBaseUrl;
 
          return this.View();
       }
@@ -31,7 +28,7 @@ namespace PeopleTracker.Web.Controllers
       [ValidateAntiForgeryToken]
       public ActionResult Create([Bind("ID", "FirstName", "MiddleName", "LastName")] Person person)
       {
-         ViewData["WebApiBaseUrl"] = this.siteOptions.Value.WebApiBaseUrl;
+         ViewData["WebApiBaseUrl"] = this.siteOptions.Options.WebApiBaseUrl;
 
          if (this.ModelState.IsValid)
          {
@@ -44,7 +41,7 @@ namespace PeopleTracker.Web.Controllers
 
       public ActionResult Delete(int? id)
       {
-         ViewData["WebApiBaseUrl"] = this.siteOptions.Value.WebApiBaseUrl;
+         ViewData["WebApiBaseUrl"] = this.siteOptions.Options.WebApiBaseUrl;
 
          if (id == null)
          {
@@ -65,7 +62,7 @@ namespace PeopleTracker.Web.Controllers
       [ValidateAntiForgeryToken]
       public ActionResult DeleteConfirmed(int id)
       {
-         ViewData["WebApiBaseUrl"] = this.siteOptions.Value.WebApiBaseUrl;
+         ViewData["WebApiBaseUrl"] = this.siteOptions.Options.WebApiBaseUrl;
 
          var person = this.db.People.FirstOrDefault(p => p.ID == id);
          if (person == null)
@@ -78,7 +75,7 @@ namespace PeopleTracker.Web.Controllers
 
       public ActionResult Details(int? id)
       {
-         ViewData["WebApiBaseUrl"] = this.siteOptions.Value.WebApiBaseUrl;
+         ViewData["WebApiBaseUrl"] = this.siteOptions.Options.WebApiBaseUrl;
 
          if (id == null)
          {
@@ -94,7 +91,7 @@ namespace PeopleTracker.Web.Controllers
 
       public ActionResult Edit(int? id)
       {
-         ViewData["WebApiBaseUrl"] = this.siteOptions.Value.WebApiBaseUrl;
+         ViewData["WebApiBaseUrl"] = this.siteOptions.Options.WebApiBaseUrl;
 
          if (id == null)
          {
@@ -112,7 +109,7 @@ namespace PeopleTracker.Web.Controllers
       [ValidateAntiForgeryToken]
       public ActionResult Edit([Bind("ID", "FirstName", "MiddleName", "LastName")] Person person)
       {
-         ViewData["WebApiBaseUrl"] = this.siteOptions.Value.WebApiBaseUrl;
+         ViewData["WebApiBaseUrl"] = this.siteOptions.Options.WebApiBaseUrl;
 
          if (this.ModelState.IsValid)
          {
@@ -124,7 +121,7 @@ namespace PeopleTracker.Web.Controllers
 
       public IActionResult Index()
       {
-         ViewData["WebApiBaseUrl"] = this.siteOptions.Value.WebApiBaseUrl;
+         ViewData["WebApiBaseUrl"] = this.siteOptions.Options.WebApiBaseUrl;
 
          return this.View(db.People.ToList());
       }
