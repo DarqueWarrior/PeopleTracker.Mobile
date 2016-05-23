@@ -3,7 +3,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+usibng OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using TestContext = Microsoft.VisualStudio.TestTools.UnitTesting.TestContext;
@@ -48,6 +48,8 @@ namespace PeopleTracker.UITests
          driver.FindElementByLinkText("Create New").Click();
          driver.FindElementById("FirstName").Clear();
          driver.FindElementById("FirstName").SendKeys(browser);
+         driver.FindElementById("MiddleName").Clear();
+         driver.FindElementById("MiddleName").SendKeys("E");
          driver.FindElementById("LastName").Clear();
          driver.FindElementById("LastName").SendKeys("User");
          driver.FindElementByCssSelector("input.btn").Click();

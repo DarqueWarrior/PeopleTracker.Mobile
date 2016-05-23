@@ -65,8 +65,8 @@
     <Build Include="dbo\Tables\People.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="PeopleTracker.Database.QA.publish.xml" />
     <None Include="PeopleTracker.Database.Dev.publish.xml" />
     <None Include="PeopleTracker.Database.publish.xml" />
+    <None Include="dbo\Tables\PeopleTracker.Database.QA.publish.xml" />
   </ItemGroup>
 </Project>
