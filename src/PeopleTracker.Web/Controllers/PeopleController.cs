@@ -29,7 +29,7 @@ namespace PeopleTracker.Web.Controllers
 
       [HttpPost]
       [ValidateAntiForgeryToken]
-      public ActionResult Create([Bind("ID", "FirstName", "MiddleName", "LastName")] Person person)
+      public ActionResult Create([Bind("ID", "FirstName", "LastName")] Person person)
       {
          ViewData["WebApiBaseUrl"] = this.siteOptions.Value.WebApiBaseUrl;
 
@@ -110,7 +110,7 @@ namespace PeopleTracker.Web.Controllers
 
       [HttpPost]
       [ValidateAntiForgeryToken]
-      public ActionResult Edit([Bind("ID", "FirstName", "MiddleName", "LastName")] Person person)
+      public ActionResult Edit([Bind("ID", "FirstName", "LastName")] Person person)
       {
          ViewData["WebApiBaseUrl"] = this.siteOptions.Value.WebApiBaseUrl;
 
