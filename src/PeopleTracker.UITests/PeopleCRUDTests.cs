@@ -102,5 +102,3 @@ namespace PeopleTracker.UITests
       #endregion
    }
 }
-
-h
