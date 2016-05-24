@@ -48,6 +48,8 @@ namespace PeopleTracker.UITests
          driver.FindElementByLinkText("Create New").Click();
          driver.FindElementById("FirstName").Clear();
          driver.FindElementById("FirstName").SendKeys(browser);
+         driver.FindElementById("MiddleName").Clear();
+         driver.FindElementById("MiddleName").SendKeys("E");
          driver.FindElementById("LastName").Clear();
          driver.FindElementById("LastName").SendKeys("User");
          driver.FindElementByCssSelector("input.btn").Click();
@@ -100,3 +102,5 @@ namespace PeopleTracker.UITests
       #endregion
    }
 }
+
+h
