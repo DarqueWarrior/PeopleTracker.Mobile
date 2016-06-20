@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeopleTracker.Mobile.Views.Home.Index" Title="People Tracker">
+   <ContentPage.ToolbarItems>
+      <ToolbarItem Text="People" Clicked="OnPeopleClicked" Order="Primary" Priority="0">
+         <ToolbarItem.Icon>
+            <OnPlatform x:TypeArguments="FileImageSource"
+                        WinPhone="Assets/users.png"
+                        Android="ic_action_users.png" />
+         </ToolbarItem.Icon>
+      </ToolbarItem>
+      <ToolbarItem Text="About" Clicked="OnAboutClicked" Order="Secondary"/>
+      <ToolbarItem Text="Contact" Clicked="OnContactClicked" Order="Secondary"/>
+   </ContentPage.ToolbarItems>
+   <ScrollView>
+      <StackLayout Orientation="Vertical" Padding="20,0,0,0">
+         <Label Text="Applications Use" FontAttributes="Bold" FontSize="Large" />
+         <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+            <Label>Xamarin Forms</Label>
+            <Label>.NET Core RC2</Label>
+            <Label>Gulp and Bower</Label>
+            <Label>Bootstrap</Label>
+            <Label>xUnit</Label>
+            <Label>Visual Studio</Label>
+            <Label>Selenium</Label>
+            <Label>Docker</Label>
+            <Label>Docker Hub</Label>
+            <Label>Azure</Label>
+            <Label>Ubuntu Linux</Label>
+            <Label>Azure SQL Database</Label>
+            <Label>Git</Label>
+            <Label>Team Services</Label>
+         </StackLayout>
+      </StackLayout>
+   </ScrollView>
+</ContentPage>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeopleTracker.Mobile.Views.Home.About" Title="About">
+   <StackLayout Padding="20">
+      <Label Text="People Tracker is a demo application that shows the power of Microsoft Mobile DevOps." FontSize="Large" />
+      <Label Text="This demo was created by Donovan Brown who blogs at http://donovanbrown.com."/>
+      <Label Text="You can also follow him on Twitter at @DonovanBrown."/>
+   </StackLayout>
+</ContentPage>
