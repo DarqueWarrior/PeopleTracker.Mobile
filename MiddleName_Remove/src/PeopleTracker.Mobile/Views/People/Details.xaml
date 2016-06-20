@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeopleTracker.Mobile.Views.People.Details" Title="Details">
+   <ContentPage.ToolbarItems>
+      <ToolbarItem Text="Delete" Clicked="OnDeleteClicked">
+         <ToolbarItem.Icon>
+            <OnPlatform x:TypeArguments="FileImageSource"
+                        WinPhone="Assets/user_delete.png"
+                        Android="ic_action_user_delete.png"/>
+         </ToolbarItem.Icon>
+      </ToolbarItem>
+      <ToolbarItem Text="Edit" Clicked="OnEditItemClicked">
+         <ToolbarItem.Icon>
+            <OnPlatform x:TypeArguments="FileImageSource"
+                        WinPhone="Assets/user_edit.png"
+                        Android="ic_action_user_edit.png" />
+         </ToolbarItem.Icon>
+      </ToolbarItem>
+   </ContentPage.ToolbarItems>
+   <StackLayout VerticalOptions="StartAndExpand" Padding="20">
+      <Label Text="Person Details" FontAttributes="Bold" FontSize="Large" x:Name="PageTitle"/>
+      <Label Text="First Name:" FontAttributes="Bold" />
+      <Label Text="{Binding Path=FirstName}" />
+      <Label Text="Last Name:" FontAttributes="Bold" />
+      <Label Text="{Binding Path=LastName}" />
+   </StackLayout>
+</ContentPage>
