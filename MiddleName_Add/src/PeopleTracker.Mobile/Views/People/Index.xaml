@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeopleTracker.Mobile.Views.People.Index" Title="People">
+   <ContentPage.ToolbarItems>
+      <ToolbarItem Text="Refresh" Clicked="OnRefreshClicked">
+         <ToolbarItem.Icon>
+            <OnPlatform x:TypeArguments="FileImageSource"
+                        WinPhone="Assets/user_sync.png"
+                        Android="ic_action_user_sync.png" />
+         </ToolbarItem.Icon>
+      </ToolbarItem>
+      <ToolbarItem Text="Create" Clicked="OnAddItemClicked">
+         <ToolbarItem.Icon>
+            <OnPlatform x:TypeArguments="FileImageSource"
+                        WinPhone="Assets/user_add.png"
+                        Android="ic_action_user_add.png" />
+         </ToolbarItem.Icon>
+      </ToolbarItem>
+   </ContentPage.ToolbarItems>
+   <ListView x:Name="listView" ItemSelected="ListView_OnItemSelected">
+      <ListView.ItemTemplate>
+         <DataTemplate>
+            <ViewCell>
+               <StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                  <Label Text="{Binding FirstName}" VerticalTextAlignment="Center" />
+                  <Label Text="{Binding MiddleName}" VerticalTextAlignment="Center" />
+                  <Label Text="{Binding LastName}" VerticalTextAlignment="Center" />
+               </StackLayout>
+            </ViewCell>
+         </DataTemplate>
+      </ListView.ItemTemplate>
+   </ListView>
+</ContentPage>
