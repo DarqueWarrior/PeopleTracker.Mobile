@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeopleTracker.Mobile.Views.People.CreateOrEdit" Title="Edit">
+   <ContentPage.ToolbarItems>
+      <ToolbarItem Text="Cancel" Clicked="OnCancelClicked">
+         <ToolbarItem.Icon>
+            <OnPlatform x:TypeArguments="FileImageSource"
+                        WinPhone="Assets/user_cancel.png"
+                        Android="ic_action_user_cancel.png"/>
+         </ToolbarItem.Icon>
+      </ToolbarItem>
+      <ToolbarItem Text="Save" Clicked="OnSaveItemClicked">
+         <ToolbarItem.Icon>
+            <OnPlatform x:TypeArguments="FileImageSource"
+                        WinPhone="Assets/user_ok.png"
+                        Android="ic_action_user_ok.png" />
+         </ToolbarItem.Icon>
+      </ToolbarItem>
+   </ContentPage.ToolbarItems>
+   <StackLayout VerticalOptions="StartAndExpand" Padding="20">
+      <Label Text="Edit Person" FontAttributes="Bold" FontSize="Large" x:Name="PageTitle"/>
+      <Label Text="First Name" />
+      <Entry x:Name="FirstName" Text="{Binding Path=FirstName}" />
+      <Label Text="Middle Name" />
+      <Entry x:Name="MiddleName" Text="{Binding Path=MiddleName}" />
+      <Label Text="Last Name" />
+      <Entry x:Name="LastName" Text="{Binding Path=LastName}" />
+   </StackLayout>
+</ContentPage>
