@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace PeopleTracker.Web.Models
+﻿namespace PeopleTracker.Web.Models
 {
    public class Person
    {
