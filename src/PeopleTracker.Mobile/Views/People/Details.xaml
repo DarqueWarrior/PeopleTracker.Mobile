@@ -22,8 +22,6 @@
       <Label Text="Person Details" FontAttributes="Bold" FontSize="Large" x:Name="PageTitle"/>
       <Label Text="First Name:" FontAttributes="Bold" />
       <Label Text="{Binding Path=FirstName}" />
-      <Label Text="Middle Name:" FontAttributes="Bold" />
-      <Label Text="{Binding Path=MiddleName}" />
       <Label Text="Last Name:" FontAttributes="Bold" />
       <Label Text="{Binding Path=LastName}" />
    </StackLayout>

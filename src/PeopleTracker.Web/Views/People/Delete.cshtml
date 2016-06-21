@@ -1,11 +1,8 @@
 ﻿@model PeopleTracker.Web.Models.Person
-
 @{
    ViewBag.Title = "Delete";
 }
-
 <h2>Delete</h2>
-
 <h3>Are you sure you want to delete this?</h3>
 <div>
    <h4>Person</h4>
@@ -14,29 +11,16 @@
       <dt>
          @Html.DisplayNameFor(model => model.FirstName)
       </dt>
-
       <dd>
          @Html.DisplayFor(model => model.FirstName)
       </dd>
-
-      <dt>
-         @Html.DisplayNameFor(model => model.MiddleName)
-      </dt>
-
-      <dd>
-         @Html.DisplayFor(model => model.MiddleName)
-      </dd>
-           
       <dt>
          @Html.DisplayNameFor(model => model.LastName)
       </dt>
-
       <dd>
          @Html.DisplayFor(model => model.LastName)
       </dd>
-
    </dl>
-
    @using (Html.BeginForm())
    {
       @Html.AntiForgeryToken()
