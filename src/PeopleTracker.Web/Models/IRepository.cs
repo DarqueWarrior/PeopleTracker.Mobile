@@ -1,15 +1,16 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace PeopleTracker.Web.Models
 {
    public interface IRepository
    {
-      IEnumerable<Person> People { get; }
+      Task<IEnumerable<Person>> GetPeople();
 
-      bool AddPerson(Person person);
+      Task<bool> AddPerson(Person person);
 
-      void RemovePerson(Person person);
+      Task RemovePerson(Person person);
 
-      bool UpdatePerson(Person person);
+      Task<bool> UpdatePerson(Person person);
    }
 }

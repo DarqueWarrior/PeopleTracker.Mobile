@@ -1,66 +1,79 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using Microsoft.Extensions.OptionsModel;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 
 namespace PeopleTracker.Web.Models
 {
    public class Repository : IRepository
    {
-      private IOptions<SiteOptions> siteOptions;
+      private readonly IOptions<SiteOptions> siteOptions;
 
       public Repository(IOptions<SiteOptions> options)
       {
-         this.siteOptions = options;
+         siteOptions = options;
       }
 
-      public IEnumerable<Person> People
+      public async Task<IEnumerable<Person>> GetPeople()
       {
-         get
+         var people = new List<Person>();
+
+         try
          {
+            // RestUrl = "http://peopletrackerdotnetservice-dev.azurewebsites.net/api/people"
             var client = GetClient();
-
-            var response = client.GetAsync("api/People").Result;
-
+            var response = await client.GetAsync("api/People");
             if (response.IsSuccessStatusCode)
             {
-               return response.Content.ReadAsAsync<IEnumerable<Person>>().Result;
+               var content = await response.Content.ReadAsStringAsync();
+               people = JsonConvert.DeserializeObject<List<Person>>(content);
             }
-
-            return new Person[0];
          }
+         catch (Exception ex)
+         {
+            Debug.WriteLine(@"				ERROR {0}", ex.Message);
+         }
+
+         return people;
       }
 
-      public bool AddPerson(Person person)
+      public async Task<bool> AddPerson(Person person)
       {
          var client = GetClient();
-         var response = client.PostAsJsonAsync<Person>("api/People", person).Result;
+         var personJson = JsonConvert.SerializeObject(person);
+         var content = new StringContent(personJson, Encoding.UTF8, "application/json");
+         var response = await client.PostAsync("api/People", content);
 
-         return response.IsSuccessStatusCode;         
+         return response.IsSuccessStatusCode;
       }
 
-      public void RemovePerson(Person person)
+      public async Task RemovePerson(Person person)
       {
          var client = GetClient();
 
          // If you don't wait you will return to the list page before the item
          // is removed.
-         client.DeleteAsync("api/People/" + person.ID).Wait();
+         await client.DeleteAsync("api/People/" + person.ID);
       }
 
-      public bool UpdatePerson(Person person)
+      public async Task<bool> UpdatePerson(Person person)
       {
          var client = GetClient();
-         var response = client.PutAsJsonAsync<Person>("api/People/" + person.ID, person).Result;
+         var personJson = JsonConvert.SerializeObject(person);
+         var content = new StringContent(personJson, Encoding.UTF8, "application/json");
+         var response = await client.PutAsync("api/People/" + person.ID, content);
 
          return response.IsSuccessStatusCode;
       }
 
       private HttpClient GetClient()
       {
-         HttpClient client = new HttpClient();
-         client.BaseAddress = new Uri(siteOptions.Value.WebApiBaseUrl);
+         var client = new HttpClient { MaxResponseContentBufferSize = 256000, BaseAddress = new Uri(siteOptions.Value.WebApiBaseUrl) };
 
          // Add an Accept header for JSON format.
          client.DefaultRequestHeaders.Accept.Add(
