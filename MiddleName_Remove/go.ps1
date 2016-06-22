@@ -1,1 +1,1 @@
-﻿cp .\src ..\ -Recurse -Force
+﻿cp .\src ..\ -Recurse -Force -Verbose
