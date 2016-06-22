@@ -1,0 +1,1 @@
+﻿cp .\src ..\ -Recurse -Force
