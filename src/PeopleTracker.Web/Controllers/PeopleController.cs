@@ -27,7 +27,7 @@ namespace PeopleTracker.Web.Controllers
 
       [HttpPost]
       [ValidateAntiForgeryToken]
-      public async Task<ActionResult> Create([Bind("ID", "FirstName", "LastName")] Person person)
+      public async Task<ActionResult> Create([Bind("ID", "FirstName", "MiddleName", "LastName")] Person person)
       {
          ViewData["WebApiBaseUrl"] = siteOptions.Value.WebApiBaseUrl;
 
@@ -121,7 +121,7 @@ namespace PeopleTracker.Web.Controllers
 
       [HttpPost]
       [ValidateAntiForgeryToken]
-      public async Task<ActionResult> Edit([Bind("ID", "FirstName", "LastName")] Person person)
+      public async Task<ActionResult> Edit([Bind("ID", "FirstName", "MiddleName", "LastName")] Person person)
       {
          ViewData["WebApiBaseUrl"] = siteOptions.Value.WebApiBaseUrl;
 
