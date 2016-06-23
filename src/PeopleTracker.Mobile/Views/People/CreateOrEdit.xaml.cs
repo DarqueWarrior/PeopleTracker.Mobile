@@ -43,6 +43,7 @@ namespace PeopleTracker.Mobile.Views.People
          temp = new Person
          {
             FirstName = ((Person)this.BindingContext).FirstName,
+            MiddleName = ((Person)this.BindingContext).MiddleName,
             LastName = ((Person)this.BindingContext).LastName
          };
       }
@@ -66,6 +67,7 @@ namespace PeopleTracker.Mobile.Views.People
       protected async void OnCancelClicked(object sender, EventArgs e)
       {
          original.FirstName = temp.FirstName;
+         original.MiddleName = temp.MiddleName;
          original.LastName = temp.LastName;
 
          await Navigation.PopAsync();
