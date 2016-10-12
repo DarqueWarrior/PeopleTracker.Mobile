@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:1.0.0-rc2-core
+FROM microsoft/aspnetcore:latest
 
 EXPOSE 5000
 
