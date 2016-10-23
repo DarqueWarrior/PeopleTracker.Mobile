@@ -1,9 +1,9 @@
 FROM microsoft/aspnetcore:latest
 
-EXPOSE 5000
-
-ADD . /app
-
+# Set the Working Directory
 WORKDIR /app
+
+# Copy the app
+COPY . /app
 
 ENTRYPOINT dotnet PeopleTracker.Web.dll
