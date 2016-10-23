@@ -7,7 +7,6 @@ namespace PeopleTracker.Mobile.Models
    {
       private string firstName;
       private string lastName;
-      private string middleName;
       public int ID { get; set; }
 
       public string FirstName
@@ -31,19 +30,6 @@ namespace PeopleTracker.Mobile.Models
             if (lastName != value)
             {
                lastName = value;
-               OnPropertyChanged();
-            }
-         }
-      }
-
-      public string MiddleName
-      {
-         get { return middleName; }
-         set
-         {
-            if (middleName != value)
-            {
-               middleName = value;
                OnPropertyChanged();
             }
          }

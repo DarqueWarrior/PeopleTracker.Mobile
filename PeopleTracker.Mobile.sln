@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleTracker.Mobile", "src\PeopleTracker.Mobile\PeopleTracker.Mobile.csproj", "{E6133D75-6A6E-4E6D-AF39-DFA1BC4E06E1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleTracker.Mobile.Droid", "src\PeopleTracker.Mobile.Droid\PeopleTracker.Mobile.Droid.csproj", "{5B3CEE52-1F3D-4BF2-B882-0ADAEDE220B6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleTracker.Mobile.iOS", "src\PeopleTracker.Mobile.iOS\PeopleTracker.Mobile.iOS.csproj", "{AA16872B-1CF2-40A8-8BB8-07C08E8B5A24}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleTracker.Mobile.UWP", "src\PeopleTracker.Mobile.UWP\PeopleTracker.Mobile.UWP.csproj", "{37246730-1B39-42D7-920C-5AF0D16F956F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -191,66 +189,6 @@ Global
 		{AA16872B-1CF2-40A8-8BB8-07C08E8B5A24}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{AA16872B-1CF2-40A8-8BB8-07C08E8B5A24}.Release|x64.ActiveCfg = Release|iPhone
 		{AA16872B-1CF2-40A8-8BB8-07C08E8B5A24}.Release|x86.ActiveCfg = Release|iPhone
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|Any CPU.ActiveCfg = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|Any CPU.Build.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|Any CPU.Deploy.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|ARM.ActiveCfg = Release|ARM
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|ARM.Build.0 = Release|ARM
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|ARM.Deploy.0 = Release|ARM
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|iPhone.ActiveCfg = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|iPhone.Build.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|iPhone.Deploy.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|iPhoneSimulator.Build.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|iPhoneSimulator.Deploy.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|x64.ActiveCfg = Release|x64
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|x64.Build.0 = Release|x64
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|x64.Deploy.0 = Release|x64
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|x86.ActiveCfg = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|x86.Build.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Ad-Hoc|x86.Deploy.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|Any CPU.ActiveCfg = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|Any CPU.Build.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|Any CPU.Deploy.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|ARM.ActiveCfg = Release|ARM
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|ARM.Build.0 = Release|ARM
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|ARM.Deploy.0 = Release|ARM
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|iPhone.ActiveCfg = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|iPhone.Build.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|iPhone.Deploy.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|iPhoneSimulator.ActiveCfg = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|iPhoneSimulator.Build.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|iPhoneSimulator.Deploy.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|x64.ActiveCfg = Release|x64
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|x64.Build.0 = Release|x64
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|x64.Deploy.0 = Release|x64
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|x86.ActiveCfg = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|x86.Build.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.AppStore|x86.Deploy.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Debug|ARM.ActiveCfg = Debug|ARM
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Debug|ARM.Build.0 = Debug|ARM
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Debug|ARM.Deploy.0 = Debug|ARM
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Debug|iPhone.ActiveCfg = Debug|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Debug|iPhoneSimulator.ActiveCfg = Debug|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Debug|x64.ActiveCfg = Debug|x64
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Debug|x64.Build.0 = Debug|x64
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Debug|x64.Deploy.0 = Debug|x64
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Debug|x86.ActiveCfg = Debug|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Debug|x86.Build.0 = Debug|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Debug|x86.Deploy.0 = Debug|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Release|Any CPU.ActiveCfg = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Release|ARM.ActiveCfg = Release|ARM
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Release|ARM.Build.0 = Release|ARM
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Release|ARM.Deploy.0 = Release|ARM
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Release|iPhone.ActiveCfg = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Release|iPhoneSimulator.ActiveCfg = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Release|x64.ActiveCfg = Release|x64
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Release|x64.Build.0 = Release|x64
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Release|x64.Deploy.0 = Release|x64
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Release|x86.ActiveCfg = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Release|x86.Build.0 = Release|x86
-		{37246730-1B39-42D7-920C-5AF0D16F956F}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
