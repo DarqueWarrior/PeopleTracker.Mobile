@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleTracker.Mobile.Droid"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleTracker.Mobile.iOS", "src\PeopleTracker.Mobile.iOS\PeopleTracker.Mobile.iOS.csproj", "{AA16872B-1CF2-40A8-8BB8-07C08E8B5A24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleTracker.Mobile.Tests", "PeopleTracker.Mobile.Tests\PeopleTracker.Mobile.Tests.csproj", "{94700172-6200-49D2-B3B3-770114E8558C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleTracker.Mobile.Tests", "src\PeopleTracker.Mobile.Tests\PeopleTracker.Mobile.Tests.csproj", "{94700172-6200-49D2-B3B3-770114E8558C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -65,11 +65,11 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\src\PeopleTracker.Mobile.Droid\PeopleTracker.Mobile.Droid.csproj">
+    <ProjectReference Include="..\PeopleTracker.Mobile.Droid\PeopleTracker.Mobile.Droid.csproj">
       <Project>{5b3cee52-1f3d-4bf2-b882-0adaede220b6}</Project>
       <Name>PeopleTracker.Mobile.Droid</Name>
     </ProjectReference>
-    <ProjectReference Include="..\src\PeopleTracker.Mobile.iOS\PeopleTracker.Mobile.iOS.csproj">
+    <ProjectReference Include="..\PeopleTracker.Mobile.iOS\PeopleTracker.Mobile.iOS.csproj">
       <Project>{aa16872b-1cf2-40a8-8bb8-07c08e8b5a24}</Project>
       <Name>PeopleTracker.Mobile.iOS</Name>
     </ProjectReference>
